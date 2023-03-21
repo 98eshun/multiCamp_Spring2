@@ -17,4 +17,6 @@ public class MemberListPrinter {
 		members.forEach(m -> printer.print(m));
 		System.out.println();
 	}
+	
+
 }

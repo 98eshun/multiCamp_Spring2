@@ -21,10 +21,12 @@ public class RegisterController {
 		this.memberRegisterService = memberRegisterService;
 	}
 
+	/*
 	@RequestMapping("/register/step1")	//http://localhost:8080/mySpringWeb/register/step1
 	public String handleStep1() {
 		return "register/step1";
 	}
+	*/
 	
 	@PostMapping("/register/step2")
 	public String handleStep2(@RequestParam(value="agree", defaultValue="false") boolean agree, Model model) {	//agree가 String으로 넘어오지만 자동 형변환이 된다
@@ -44,12 +46,12 @@ public class RegisterController {
 	public String handleStep2Get() {
 		return "redirect:/register/step1";
 	}
-	
-	@RequestMapping("/main")
+	/*
+	@GetMapping("/main")
 	public String handleMain() {	//뷰 이름만 반환하는 컨트롤러 = 뷰 컨트롤러
-		return "/main";
+		return "/main";				
 	}
-	
+	*/
 /*	
 	@PostMapping("/register/step3")
 	public String handleStep3(RegisterRequest regReq) {

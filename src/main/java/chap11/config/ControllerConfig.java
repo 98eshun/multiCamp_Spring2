@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 // 컨트롤러 설정
 
+import chap11.controller.MemberController;
 import chap11.controller.RegisterController;
 import chap11.model.MemberRegisterService;
 @Configuration
@@ -21,5 +22,10 @@ public class ControllerConfig {
 		rc.setMemberRegisterService(memberRegisterService);	//의존주입
 		
 		return rc;
+	}
+	
+	@Bean
+	public MemberController memberController() {
+		return new MemberController();
 	}
 }
