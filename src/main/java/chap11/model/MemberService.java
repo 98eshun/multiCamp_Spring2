@@ -1,5 +1,7 @@
 package chap11.model;
 
+import java.util.Collection;
+
 public class MemberService {
 
 	private MemberDao memberDao;
@@ -10,6 +12,10 @@ public class MemberService {
 	
 	public Member findMember(String email) {
 		return memberDao.selectByEmail(email);
+	}
+	
+	public Collection<Member> allMember(){
+		return memberDao.selectAll();
 	}
 	
 	public boolean checkLoginAuth(LoginCommand login) {

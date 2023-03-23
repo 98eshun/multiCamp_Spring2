@@ -17,7 +17,7 @@
 
 	<fieldset>
 		
-		<p>${result}</p>
+		<p>${members.email}</p>
 	</fieldset>
 
 </body>

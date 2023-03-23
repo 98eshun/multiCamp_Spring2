@@ -95,10 +95,8 @@ public class MemberController {
 	
 	@GetMapping("/memeber/list")
 	public String list(Model model) {
-		String result="";
-		Collection<Member> members = memberDao.selectAll();
-		result = members.forEach(m -> printer.print(m, result));
-		model.addAttribute("result",result);
+		Collection<Member> members = memberService.allMember();
+		model.addAttribute("members", members);
 		return "/memeber/list";
 	}
 }

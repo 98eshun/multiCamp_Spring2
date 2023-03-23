@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import chap11.controller.MemberController;
 import chap11.controller.RegisterController;
 import chap11.model.MemberRegisterService;
+import chap11.survey.SurveyController;
 @Configuration
 
 
@@ -27,5 +28,10 @@ public class ControllerConfig {
 	@Bean
 	public MemberController memberController() {
 		return new MemberController();
+	}
+	
+	@Bean
+	public SurveyController surveyController() {
+		return new SurveyController();
 	}
 }
